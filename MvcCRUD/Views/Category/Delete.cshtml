@@ -1,0 +1,19 @@
+﻿
+@model Category
+<form method="post" asp-action="Delete">
+    <div class="row pb-2">
+       <h2>Edit Category</h2>
+    </div>
+    <div>
+       
+      <label>Name: </label>
+      <input asp-for="Name" />
+      <br />
+      <label>Category Number</label>
+      <input asp-for="displayOrder" />
+      <br />
+      <button type="submit">Delete</button>
+      <button type="submit"><a class="nav-link text-dark" asp-area="Delete" asp-controller="Home" asp-action="Index">Back to home</a></button>
+
+    </div>
+</form>
