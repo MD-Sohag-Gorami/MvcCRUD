@@ -38,7 +38,6 @@ namespace MvcCRUD.Controllers
             return View(category);
         }
 
-
         //GET
         public IActionResult Edit(int ? id)
         {
