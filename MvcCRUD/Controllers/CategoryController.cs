@@ -75,5 +75,17 @@ namespace MvcCRUD.Controllers
             return RedirectToAction("Index");
         }
 
+        public async Task<List<Category>> GetTopProductsAsync()
+        {
+            var list = _db.Categories.Select(category => new Category()
+            {
+                Id = category.Id,
+                Name = category.Name,
+                displayOrder = category.displayOrder,
+                CreatedDate = category.CreatedDate
+            }).Take(3).ToList();
+            return list;
+        }
+
     }
 }

@@ -1,0 +1,14 @@
+﻿<h1>Testing view componenet </h1>
+
+@model IEnumerable<Category>
+<div class="row">
+    @foreach(var item in Model)
+    {
+            
+               <p> Product Name: @item.Name</p>
+                <br/>
+            
+           
+       
+    }
+</div>
